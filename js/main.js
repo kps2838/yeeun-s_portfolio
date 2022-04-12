@@ -28,7 +28,7 @@ $(function(){
           if (scroll >= contact_scroll){
             $("#gnb > ul > li > a").css("color" , "#252C65");
             $("#gnb .border").css("background-color" , "#252C65");
-            $("#gnb > ul > li").eq(1).find('a').css('color','#ff0000')
+            $("#gnb > ul > li").eq(3).find('a').css('color','#ff0000')
           }
       })
 

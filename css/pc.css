@@ -732,16 +732,28 @@ section .title_border{
     width: 222px;
     height: 57px;
     border-radius: 30px;
-    background-color: #9296B2;
-    color: #000;
     font-size: 18px;
     font-weight: 500;
     border: none;
 }
 
-#works .text .btn-group > button:hover{
+#works .text .btn-group > button:first-child{
     background-color: #252C65;
     color: #fff;
+}
+
+#works .text .btn-group > button:last-child{
+    border: 3px solid #252C65;
+    background-color: transparent;
+}
+
+#mobile .text .btn-group > button:first-child{
+    background-color: #252C65;
+    color: #fff;
+}
+
+#works .text .btn-group > button:hover{
+    font-size: 22px;
     cursor: pointer;
 }
 
