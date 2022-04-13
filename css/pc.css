@@ -981,6 +981,10 @@ section .title_border{
     display: none;
 }
 
+#works .workdetail.others > div.on{
+    display: flex;
+}
+
 #works .workdetail.others > div > img{
     height: 80vh;
 }

@@ -77,6 +77,18 @@ $(function(){
         $('.workdetail .o_detail_01').addClass('on');
       })
 
+      $('#others .perfume #webpage').click(function(){
+        $('.workdetail .o_detail_02').addClass('on');
+      })
+
+      $('#others .icecream #webpage').click(function(){
+        $('.workdetail .o_detail_03').addClass('on');
+      })
+
+      $('#others .book #webpage').click(function(){
+        $('.workdetail .o_detail_04').addClass('on');
+      })
+
 
       $('.workdetail .close').click(function(){
         $('.workdetail > div').removeClass('on');
