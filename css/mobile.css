@@ -427,7 +427,6 @@ section .title_border{
     height: 537px;
     display: block;
     position: relative;
-
 }
 
 
@@ -437,7 +436,7 @@ section .title_border{
     flex-direction: column;
     z-index: 99;
     position: absolute;
-    justify-content: center;
+    align-items: center;
 }
 
 
@@ -510,7 +509,7 @@ section .title_border{
 
 #works #website .images{
     position: relative;
-    padding-left: 30px;
+    padding-right: 50px;
 }
 
 #works #website .images > img{
@@ -519,13 +518,6 @@ section .title_border{
 
 #works #mobile .images{
     position: relative;
-    margin-right: 250px;
-}
-
-#works #responsive .images{
-    position: relative;
-    margin-right: 150px;
-    padding-top: 100px;
 }
 
 #works #website .images > h3{
@@ -535,7 +527,7 @@ section .title_border{
     color: #fff;
     width: 80vw;
     text-align: center;
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 #works #mobile .images > h3{

@@ -52,7 +52,6 @@
     position: relative;
 }
 
-
 #home .title .circle{
     border: 3px solid #fff;
     width: 718px;
@@ -430,6 +429,7 @@ section .title_border{
     padding-right: 140px;
 }
 
+
 #responsive .slide .container {
     padding-right: 80px;
 }
@@ -486,6 +486,22 @@ section .title_border{
     background-color: #1269CD;
 }
 
+#works .others-content:nth-child(1) .bg_box{    
+    background-color: #801A3B;
+}
+
+#works .others-content:nth-child(2) .bg_box{    
+    background-color: #C7DFF4;
+}
+
+#works .others-content:nth-child(3) .bg_box{    
+    background-color: #B5F0FF;
+}
+
+#works .others-content:nth-child(4) .bg_box{    
+    background-color: #C53F1B;
+}
+
 #works .bg_box:nth-child(2){
     animation-delay: 0.3s;
 }
@@ -523,6 +539,16 @@ section .title_border{
     padding-top: 100px;
 }
 
+#works #others .images{
+    position: relative;
+    margin-right: 250px;
+    padding-left: 150px;
+}
+
+#works #others .perfume .images{
+    padding-top: 50px;
+}
+
 #works #website .images > h3{
     margin-top: 20px;
     font-size: 30px;
@@ -548,6 +574,18 @@ section .title_border{
     color: #fff;
     width: 615px;
     text-align: center;
+}
+
+#works #others .images > h3{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+#works #others .perfume .images > h3, #works #others .icecream .images > h3{
+    color: #000;
 }
 
 #works .container .text{
@@ -732,6 +770,79 @@ section .title_border{
     color: #000;
 }
 
+#works .others-content:nth-child(1) .text .color > div > p:nth-child(1){
+    background-color: #FF0000;
+    color: #fff;
+}
+
+#works .others-content:nth-child(1) .text .color > div > p:nth-child(2){
+    background-color: #562128;
+    color: #fff;
+}
+
+#works .others-content:nth-child(1) .text .color > div > p:nth-child(3){
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+#works .others-content:nth-child(2) .text .color > div > p:nth-child(1){
+    background-color: #FFF1FF;
+    color: #000;
+}
+
+#works .others-content:nth-child(2) .text .color > div > p:nth-child(2){
+    background-color: #C7DFF4;
+    color: #000;
+}
+
+#works .others-content:nth-child(2) .text .color > div > p:nth-child(3){
+    background-color: #708AA1;
+    color: #000;
+}
+
+#works .others-content:nth-child(3) .text .color > div > p:nth-child(1){
+    background-color: #B5F0FF;
+    color: #000;
+}
+
+#works .others-content:nth-child(3) .text .color > div > p:nth-child(2){
+    background-color: #FF7DAB;
+    color: #fff;
+}
+
+#works .others-content:nth-child(3) .text .color > div > p:nth-child(3){
+    background-color: #FFFC26;
+    color: #000;
+}
+
+#works .others-content:nth-child(3) .text .color > div > p:nth-child(4){
+    background-color: #6AFF5A;
+    color: #000;
+}
+
+#works .others-content:nth-child(4) .text .color > div > p:nth-child(1){
+    background-color: #F6D198;
+    color: #000;
+}
+
+#works .others-content:nth-child(4) .text .color > div > p:nth-child(2){
+    background-color: #113A23;
+    color: #fff;
+}
+
+#works .others-content:nth-child(4) .text .color > div > p:nth-child(3){
+    background-color: #B61717;
+    color: #fff;
+}
+
+#works .others-content:nth-child(4) .text .color > div > p:nth-child(4){
+    background-color: #8D2222;
+    color: #fff;
+}
+
+
+
+
 #works .text .btn-group{
     display: flex;
     justify-content: center;
@@ -757,18 +868,22 @@ section .title_border{
     background-color: transparent;
 }
 
-#mobile .text .btn-group > button:first-child{
-    background-color: #252C65;
-    color: #fff;
-}
 
 #works .text .btn-group > button:hover{
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
 }
 
 #works #webpage{
     margin-right: 50px;
+}
+
+
+#mobile #webpage, #others #webpage{
+    background-color: #252C65;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 #works .bg_black{
@@ -853,6 +968,21 @@ section .title_border{
     position: absolute;
     left: 50%;
     transform: translateX(-50%)
+}
+
+#works .workdetail.others > div{
+    overflow:unset;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#works .workdetail.others > div > img{
+    height: 80vh;
 }
 
 #mobile #webpage{
@@ -974,7 +1104,10 @@ section .title_border{
     transform: rotate(51deg);
     right: 150px;
     bottom: -220px;
+    animation-name: border_deco;
+    animation-duration: 1s;
 }
+
 
 #contact .border-deco > div:nth-child(2){
     position: absolute;

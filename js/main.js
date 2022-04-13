@@ -73,6 +73,10 @@ $(function(){
         $('#works .bg_black').addClass('on');
       })
 
+      $('#others .nike #webpage').click(function(){
+        $('.workdetail .o_detail_01').addClass('on');
+      })
+
 
       $('.workdetail .close').click(function(){
         $('.workdetail > div').removeClass('on');
@@ -84,6 +88,13 @@ $(function(){
         if(LayerPopup.has(e.target).length === 0){
           LayerPopup.removeClass("on");
           $('#works .bg_black').removeClass('on');
+        }
+      })
+
+      $(document).mouseup(function (e){
+        var LayerPopup = $(".workdetail.others > div > img");
+        if(LayerPopup.has(e.target).length === 0){
+          $(".workdetail.others > div").removeClass("on");
         }
       })
 
