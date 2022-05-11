@@ -1,3 +1,5 @@
+/* gnb 영역 */
+
 #gnb > ul{
     display: flex;
     margin-bottom: 20px;
@@ -36,21 +38,28 @@
     z-index: 999;
 }
 
+
+
+/* home */
+
 #home{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #252C65;
+    overflow: hidden;
+    padding: 0;
+}
+
+#particles-js{ 
+    width: 100%;
+    height: 100%;
+    background-color: #252c65; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-    overflow: hidden;
-}
-
-
-#home .title{
     position: relative;
 }
+
 
 #home .title .circle{
     border: 3px solid #fff;
@@ -116,9 +125,13 @@
     font-weight: 600;
 }
 
+
+
+/* about */
+
 #about{
     width: 100vw;
-    height: 950px;
+    height: 100vh;
     position: relative;
 }
 
@@ -129,7 +142,7 @@ section .title{
 }
 
 section{
-    padding-top: 80px;
+    padding-top: 10px;
     overflow: hidden;
 }
 
@@ -150,6 +163,7 @@ section .title div:not(:first-child){
 
 #about .title div:nth-child(6){
     margin-left: 20px;
+    padding-bottom: 10px;
 }
 
 section .title_border{
@@ -158,190 +172,116 @@ section .title_border{
     height: 8px;
 }
 
-#about .profile{
-    margin-top: 130px;
-}
-
-#about .profile li{
+#about .container{
+    margin-top: 60px;
     display: flex;
-    align-items: center;
-    color: #000;
-    font-size: 28px;
+    justify-content: space-between;
+    padding: 0 50px;
 }
 
-#about .profile li:not(:last-child){
+#about .container > img{
+    width: 400px;
+    height: 400px;
+    margin-right: 150px;
+}
+
+#about .container > .text-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start
+}
+
+#about .container > .text-box > div > h3{
+    font-size: 38px;
+    font-family: 'Playfair Display', serif;
     margin-bottom: 15px;
 }
 
+#about .container > .text-box > .profile > h3{
+    width: 120px;
+    border-top: 3px solid #252C65;
+}
 
-#about .profile li .profile_border{
-    background-color: #252C65;
+#about .container > .text-box > .license > h3{
+    width: 135px;
+    border-top: 3px solid #252C65;
+}
+
+#about .container > .text-box > .skills > h3{
     width: 100px;
-    height: 5px;
-    margin-right: 15px;
+    border-top: 3px solid #252C65;
 }
 
-#about .profile li:nth-child(2) .profile_border{
-    width: 150px;
+
+#about .container > .text-box .profile{
+    margin-right: 150px;
+    margin-bottom: 50px;
 }
 
-#about .profile li:nth-child(3) .profile_border{
-    width: 200px;
-}
-
-#about .profile li:nth-child(4) .profile_border{
-    width: 250px;
-}
-
-#about .profile > li:last-child{
-    position: relative;
-}
-
-#about .profile li .license {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 110px;
-}
-
-#about .profile li .license > li{
+#about .container > .text-box .profile > table th{
     font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    padding-right: 40px;
+    padding-bottom: 5px;
 }
 
-#about .images{
-    position: absolute;
-    bottom: 250px;
-    right: 10%;
+#about .container > .text-box .profile > table td{
+    font-size: 18px;
+    font-weight: 400;
 }
 
-#about .images > img:first-child:hover{
-    width: 110%;
+#about .container > .text-box .license > ul{
+    padding-left: 20px;
 }
 
-#about .images > img:last-child{
-    width: 222px;
+#about .container > .text-box .license > ul > li:not(:last-child){
+    list-style-image: url(../images/list-deco.svg);
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-#about .images > img:last-child:hover{
-    width: 250px;
+#about .container > .text-box .license > ul > li:nth-child(3){
+    margin-bottom: 0;
 }
 
-#about .images >img:last-child{
-    position: absolute;
-    top: 60%;
-    right: 70%;
+#about .container > .text-box .license > ul > li:last-child{
+    font-size: 16px;
 }
 
-#skills{
-    width: 100%;
-    height: 310px;
-    background-image: url(../images/skills_bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Playfair Display', serif;    
-    font-size: 96px;
-    color: #fff;
+#about .skills .skill-box{
     display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    padding: 45px;
 }
 
-
-#skills > h3{
-    order: 1;
-    margin: 0 200px;
-}
-
-#skills .programming{
-    order: 0;
-    width: 414.73px;
-    text-align: center;
-}
-
-
-#skills .photo_skill{
-    width: 414.73px;
-    order: 2;
-}
-
-#skills > ul > li{
-    display: flex;
-    align-items: center;
-    height: 65px;
-}
-
-#skills > ul > li:not(:last-child){
-    margin-bottom: 33px;
-}
-
-#skills > ul > li > img{
-    margin-right: 50px;
-}
-
-#skills > .programming > li:not(:last-child){
-    padding-left: 60px;
-}
-
-#skills > .programming > li:first-child > img{
-    margin-right: 73px;
-}
-
-#skills > .programming > li:nth-child(2) > img{
-    margin-right: 80px;
-}
-
-#skills > ul > li > .level_box{
+#about .skills .skill-box > div{
     position: relative;
-    width: 214.15px;
-    height: 27.13px;
 }
 
-#skills > ul > li > .level_box .bg_box{
-    width: 214.15px;
-    height: 27.13px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 13px;
-    position: absolute;
-    top: 0;
-    left: 0;
+#about .skills .skill-box > div:not(:last-child){
+    margin-right: 40px;
 }
 
-#skills > ul > li > .level_box .level{
-    width: 177.74px;
-    height: 27.13px;
-    border-radius: 13px;
-    background-color: #C4C7E2;
-    position: absolute;
-    top: 0;
-    left: 0;
+.skills .skill-box strong {
+    position:absolute; 
+    top:50%; 
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:18px;
+    font-family: 'Playfair Display', serif;    
+}
+
+.skills .skill-box > div:nth-child(1) > strong, .skills .skill-box > div:nth-child(3) > strong {
+    font-size:24px;
 }
 
 
-#skills > .programming > li:nth-child(2) > .level_box .level{
-    width: 107.07px;
-}
 
 
-#skills > .programming > li:nth-child(3) > .level_box .level{
-    width: 135.63px;
-}
-
-
-#skills > .photo_skill > li:first-child> .level_box .level{
-    width: 121.35px;
-}
-
-#skills > .photo_skill > li:last-child> .level_box .level{
-    width: 121.35px;
-}
+/* works */
 
 #works{
-    width: 100%;
-    height: 1048px;
+    width: 100vw;
+    height: 100vh;
     background-color: #252C65;
     position: relative;
 }
@@ -357,6 +297,8 @@ section .title_border{
 
 #works .category{
     padding-left: 25px;
+    position: absolute;
+    z-index: 999;
 }
 
 #works .category button{
@@ -371,10 +313,12 @@ section .title_border{
     padding-bottom: 10px;
 }
 
+
 #works .category button:hover{
     color: #FF0000;
     cursor: pointer;
 }
+
 
 #works .category button.on{
     color: #FF0000;
@@ -384,9 +328,11 @@ section .title_border{
     background-repeat: no-repeat;
 }
 
+
 #works .category button:not(:last-child){
     margin-right: 30px;
 }
+
 
 #works > button{
     z-index: 5;
@@ -401,7 +347,10 @@ section .title_border{
 
 #works .contents.on{
     display: block;
+    position: absolute;
+    top: 30%;
 }
+
 
 #works .contents .slide{
     width: 10000px;
@@ -412,8 +361,7 @@ section .title_border{
 
 #works .contents .slide > div{
     width: 100vw;
-    height: 627px;
-    display: block;
+    height: 470px;
     position: relative;
     overflow: hidden;
 }
@@ -426,7 +374,6 @@ section .title_border{
     z-index: 99;
     position: absolute;
     justify-content: center;
-    padding-right: 140px;
 }
 
 
@@ -439,7 +386,7 @@ section .title_border{
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 95px;
+    bottom: 50px;
 }
 
 #works .bg_box{
@@ -459,14 +406,10 @@ section .title_border{
 }
 
 #works .website-content:nth-child(2) .bg_box{    
-    background-color: #FF9DAF;
-}
-
-#works .website-content:nth-child(3) .bg_box{    
     background-color: #12006E;
 }
 
-#works .website-content:nth-child(4) .bg_box{    
+#works .website-content:nth-child(3) .bg_box{    
     background-color: #ED008C;
 }
 
@@ -486,21 +429,6 @@ section .title_border{
     background-color: #1269CD;
 }
 
-#works .others-content:nth-child(1) .bg_box{    
-    background-color: #801A3B;
-}
-
-#works .others-content:nth-child(2) .bg_box{    
-    background-color: #C7DFF4;
-}
-
-#works .others-content:nth-child(3) .bg_box{    
-    background-color: #B5F0FF;
-}
-
-#works .others-content:nth-child(4) .bg_box{    
-    background-color: #C53F1B;
-}
 
 #works .bg_box:nth-child(2){
     animation-delay: 0.3s;
@@ -525,28 +453,32 @@ section .title_border{
 
 #works #website .images{
     position: relative;
-    margin-right: 150px;
+    margin-right: 100px;
+    padding-top: 110px;
 }
 
 #works #mobile .images{
     position: relative;
-    margin-right: 250px;
+    margin-right: 150px;
+    padding-top: 110px;
 }
 
 #works #responsive .images{
     position: relative;
-    margin-right: 150px;
-    padding-top: 100px;
+    padding-top: 110px;
+    margin-right: 100px;
 }
 
-#works #others .images{
-    position: relative;
-    margin-right: 250px;
-    padding-left: 150px;
+#works #responsive .images > img{
+    width: 500px;
 }
 
-#works #others .perfume .images{
-    padding-top: 50px;
+#works #website .images > img{
+    width: 500px;
+}
+
+#works #mobile .images > img{
+    width: 220px;
 }
 
 #works #website .images > h3{
@@ -554,7 +486,7 @@ section .title_border{
     font-size: 30px;
     font-weight: 600;
     color: #fff;
-    width: 710px;
+    width: 500px;
     text-align: center;
     padding-left: 60px;
 }
@@ -568,24 +500,12 @@ section .title_border{
 }
 
 #works #responsive .images > h3{
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 30px;
     font-weight: 600;
     color: #fff;
-    width: 615px;
+    width: 500px;
     text-align: center;
-}
-
-#works #others .images > h3{
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-}
-
-#works #others .perfume .images > h3, #works #others .icecream .images > h3{
-    color: #000;
 }
 
 #works .container .text{
@@ -639,10 +559,12 @@ section .title_border{
 
 #works .website-content:nth-child(1) .text .color > div > p:nth-child(1){
     background-color: #FD9347;
+    color: #fff;
 }
 
 #works .website-content:nth-child(1) .text .color > div > p:nth-child(2){
     background-color: #AFD276;
+    color: #fff;
 }
 
 #works .website-content:nth-child(1) .text .color > div > p:nth-child(3){
@@ -651,25 +573,28 @@ section .title_border{
 }
 
 #works .website-content:nth-child(2) .text .color > div > p:nth-child(1){
-    background-color: #F9DAF7;
-    color: #000;
+    background-color: #12006E;
 }
 
 #works .website-content:nth-child(2) .text .color > div > p:nth-child(2){
-    background-color: #FF0000;
+    background-color: #F45B5B;
 }
 
 #works .website-content:nth-child(2) .text .color > div > p:nth-child(3){
+    background-color: #000000;
+}
+
+#works .website-content:nth-child(2) .text .color > div > p:nth-child(4){
     background-color: #FFFFFF;
     color: #000;
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(1){
-    background-color: #12006E;
+    background-color: #ED008C;
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(2){
-    background-color: #F45B5B;
+    background-color: #FFCA00;
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(3){
@@ -677,23 +602,6 @@ section .title_border{
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(4){
-    background-color: #FFFFFF;
-    color: #000;
-}
-
-#works .website-content:nth-child(4) .text .color > div > p:nth-child(1){
-    background-color: #ED008C;
-}
-
-#works .website-content:nth-child(4) .text .color > div > p:nth-child(2){
-    background-color: #FFCA00;
-}
-
-#works .website-content:nth-child(4) .text .color > div > p:nth-child(3){
-    background-color: #000000;
-}
-
-#works .website-content:nth-child(4) .text .color > div > p:nth-child(4){
     background-color: #333333;
 }
 
@@ -770,78 +678,6 @@ section .title_border{
     color: #000;
 }
 
-#works .others-content:nth-child(1) .text .color > div > p:nth-child(1){
-    background-color: #FF0000;
-    color: #fff;
-}
-
-#works .others-content:nth-child(1) .text .color > div > p:nth-child(2){
-    background-color: #562128;
-    color: #fff;
-}
-
-#works .others-content:nth-child(1) .text .color > div > p:nth-child(3){
-    background-color: #FFFFFF;
-    color: #000;
-}
-
-#works .others-content:nth-child(2) .text .color > div > p:nth-child(1){
-    background-color: #FFF1FF;
-    color: #000;
-}
-
-#works .others-content:nth-child(2) .text .color > div > p:nth-child(2){
-    background-color: #C7DFF4;
-    color: #000;
-}
-
-#works .others-content:nth-child(2) .text .color > div > p:nth-child(3){
-    background-color: #708AA1;
-    color: #000;
-}
-
-#works .others-content:nth-child(3) .text .color > div > p:nth-child(1){
-    background-color: #B5F0FF;
-    color: #000;
-}
-
-#works .others-content:nth-child(3) .text .color > div > p:nth-child(2){
-    background-color: #FF7DAB;
-    color: #fff;
-}
-
-#works .others-content:nth-child(3) .text .color > div > p:nth-child(3){
-    background-color: #FFFC26;
-    color: #000;
-}
-
-#works .others-content:nth-child(3) .text .color > div > p:nth-child(4){
-    background-color: #6AFF5A;
-    color: #000;
-}
-
-#works .others-content:nth-child(4) .text .color > div > p:nth-child(1){
-    background-color: #F6D198;
-    color: #000;
-}
-
-#works .others-content:nth-child(4) .text .color > div > p:nth-child(2){
-    background-color: #113A23;
-    color: #fff;
-}
-
-#works .others-content:nth-child(4) .text .color > div > p:nth-child(3){
-    background-color: #B61717;
-    color: #fff;
-}
-
-#works .others-content:nth-child(4) .text .color > div > p:nth-child(4){
-    background-color: #8D2222;
-    color: #fff;
-}
-
-
-
 
 #works .text .btn-group{
     display: flex;
@@ -879,7 +715,7 @@ section .title_border{
 }
 
 
-#mobile #webpage, #others #webpage{
+#mobile #webpage{
     background-color: #252C65;
     color: #fff;
     margin: 0;
@@ -901,9 +737,8 @@ section .title_border{
 }
 
 #works .workdetail > div{
-    width: 80vw;
-    height: 80vh;
-    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -918,51 +753,6 @@ section .title_border{
     display: block;
 }
 
-#works .workdetail > div > .top{
-    background-color: #ccc;
-    width: 100%;
-    height: 100px;
-    padding: 20px;
-    background-color: rgba(253, 147, 71, 0.2);
-    border-bottom: 3px solid rgb(253, 147, 71) ;
-}
-
-#works .workdetail .w_detail_02 .top{
-    background-color: rgba(255, 157, 175, 0.2);
-    border-bottom: 3px solid rgb(255, 157, 175);
-}
-
-#works .workdetail .w_detail_03 .top{
-    background-color: rgba(18, 0, 110, 0.2);
-    border-bottom: 3px solid rgb(18, 0, 110);
-}
-
-#works .workdetail .w_detail_04 .top{
-    background-color: rgba(237, 0, 140, 0.4);
-    border-bottom: 3px solid rgb(237, 0, 140);
-}
-
-#works .workdetail .r_detail_01 .top{
-    background-color: rgba(227, 29, 26, 0.2);
-    border-bottom: 3px solid rgb(277, 29, 26);
-}
-
-#works .workdetail .r_detail_02 .top{
-    background-color: rgba(18, 105, 205, 0.2);
-    border-bottom: 3px solid rgba(18, 105, 205);
-}
-
-#works .workdetail > div > .top > .close{
-    background : transparent;
-    border: none;
-    position: fixed;
-    top: 25px;
-    right: 25px;
-}
-
-#works .workdetail > div > .top > .close:hover{
-    cursor: pointer;
-}
 
 #works .workdetail > div > img{
     position: absolute;
@@ -970,24 +760,6 @@ section .title_border{
     transform: translateX(-50%)
 }
 
-#works .workdetail.others > div{
-    overflow:unset;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
-}
-
-#works .workdetail.others > div.on{
-    display: flex;
-}
-
-#works .workdetail.others > div > img{
-    height: 80vh;
-}
 
 #mobile #webpage{
     margin-right: 0;
@@ -997,8 +769,8 @@ section .title_border{
     border: none;
     background: transparent;
     position: absolute;
-    bottom: 328px;
     z-index: 99;
+    top: 30%;
 }
 
 #works .contents > button:hover{
@@ -1014,6 +786,8 @@ section .title_border{
     right: 15px;
     z-index: 999;
 }
+
+/* contact */
 
 #contact{
     width: 100%;

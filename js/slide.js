@@ -4,9 +4,7 @@ $(function(){
     $(window).resize(function(){
         location.reload()
     })
-
-    if(w >= 768){
-        let slideNum = 0;
+    let slideNum = 0;
         let position = 0;
 
         $('#website .prev').click(function(){
@@ -32,7 +30,7 @@ $(function(){
             target.removeClass("on"),
             void target.outerWidth(),
             target.addClass("on");
-            if(slideNum < 3){
+            if(slideNum < 2){
                 position -= w;
                 $('#works .contents .slide').css('transform', `translateX(${position}px)`);
                 slideNum = slideNum+1;
@@ -40,7 +38,7 @@ $(function(){
                 $(this).find('img').attr('src', './images/next_btn.svg');
 
             }
-            if(slideNum == 3){
+            if(slideNum == 2){
                 $('#works .contents .slide').css('transform', `${4 * w}`);
                 $(this).find('img').attr('src', './images/next_btn_done.svg');
             }
@@ -124,44 +122,6 @@ $(function(){
             }
         })
 
-        // 기타 작품
-        $('#others .prev').click(function(){
-            const target = $('#works .slide .box_group .bg_box');
-            target.removeClass("on"),
-            void target.outerWidth(),
-            target.addClass("on");
-            if(slideNum > 0){
-                position += w;
-                $('#works .contents .slide').css('transform', `translateX(${position}px)`);
-                slideNum = slideNum-1;
-                $(this).find('img').attr('src', './images/prev_btn.svg');
-                $('#works .next').find('img').attr('src', './images/next_btn.svg');
-
-            }
-            if(slideNum == 0){
-                $('#works .contents .slide').css('transform', `0`);
-                $(this).find('img').attr('src', './images/prev_btn_done.svg');
-            }
-        })
-
-        $('#others .next').click(function(){
-            const target = $('#works .slide .box_group .bg_box');
-            target.removeClass("on"),
-            void target.outerWidth(),
-            target.addClass("on");
-            if(slideNum < 3){
-                position -= w;
-                $('#works .contents .slide').css('transform', `translateX(${position}px)`);
-                slideNum = slideNum+1;
-                $('#works .prev').find('img').attr('src', './images/prev_btn.svg');
-                $(this).find('img').attr('src', './images/next_btn.svg');
-
-            }
-            if(slideNum == 3){
-                $('#works .contents .slide').css('transform', `${4 * w}`);
-                $(this).find('img').attr('src', './images/next_btn_done.svg');
-            }
-        })
 
         // 작품 탭
         $('#works .category > button').click(function(){
@@ -175,24 +135,17 @@ $(function(){
       
       $('#works .category > button').eq(0).click(function(){
         $('#works .contents').removeClass('on');
-        $('#website').addClass('on');
+        $('#responsive').addClass('on');
       })
 
       $('#works .category > button').eq(1).click(function(){
         $('#works .contents').removeClass('on');
-        $('#mobile').addClass('on');
+        $('#website').addClass('on');
       })
 
       $('#works .category > button').eq(2).click(function(){
         $('#works .contents').removeClass('on');
-        $('#responsive').addClass('on');
+        $('#mobile').addClass('on');
       })
 
-      $('#works .category > button').eq(3).click(function(){
-        $('#works .contents').removeClass('on');
-        $('#others').addClass('on');
-      })
-      
-
-    }
 })
