@@ -563,13 +563,18 @@ section .title_border{
 }
 
 #works .website-content:nth-child(1) .text .color > div > p:nth-child(2){
-    background-color: #AFD276;
+    background-color: #FEC9A3;
     color: #fff;
 }
 
 #works .website-content:nth-child(1) .text .color > div > p:nth-child(3){
-    background-color: #FFFBEC;
+    background-color: #DBEBC4;
     color: #000;
+}
+
+#works .website-content:nth-child(1) .text .color > div > p:nth-child(4){
+    background-color: #333;
+    color: #fff;
 }
 
 #works .website-content:nth-child(2) .text .color > div > p:nth-child(1){
@@ -581,12 +586,12 @@ section .title_border{
 }
 
 #works .website-content:nth-child(2) .text .color > div > p:nth-child(3){
-    background-color: #000000;
+    background-color: #FFAF7B;
 }
 
 #works .website-content:nth-child(2) .text .color > div > p:nth-child(4){
-    background-color: #FFFFFF;
-    color: #000;
+    background-color: #000000;
+    color: #fff;
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(1){
@@ -598,7 +603,7 @@ section .title_border{
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(3){
-    background-color: #000000;
+    background-color: #232323;
 }
 
 #works .website-content:nth-child(3) .text .color > div > p:nth-child(4){
@@ -737,7 +742,7 @@ section .title_border{
 }
 
 #works .workdetail > div{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 50%;
@@ -757,7 +762,8 @@ section .title_border{
 #works .workdetail > div > img{
     position: absolute;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    width: 70vw;
 }
 
 
