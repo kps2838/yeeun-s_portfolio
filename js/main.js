@@ -213,7 +213,38 @@ $(function(){
       })
     }
 
-
+    
+    $("section").each(function () {
+      $(this).on("mousewheel DOMMouseScroll", function (e) {
+        e.preventDefault();
+        var delta = 0;
+        if (!event) event = window.event;
+        if (event.wheelDelta) {
+            delta = event.wheelDelta / 120;
+            if (window.opera) delta = -delta;
+        } else if (event.detail) delta = -event.detail / 3;
+  
+        var moveTop = null;
+        if (delta < 0) {
+            if ($(this).next() != undefined) {
+                moveTop = $(this).next().offset().top;
+            }
+        } else {
+            if ($(this).prev() != undefined) {
+                moveTop = $(this).prev().offset().top;
+            }
+        }
+  
+        $("html,body").stop().animate({
+            scrollTop: moveTop + 'px'
+        }, {
+            duration: 100, complete: function () {
+            }
+  
+        });
+  
+      });
+    });
 
 
       // 팝업창
@@ -221,26 +252,31 @@ $(function(){
       $('#website .han #detail').click(function(){
         $('.workdetail .w_detail_01').addClass('on');
         $('#works .bg_black').addClass('on');
+        $('section').off("mousewheel DOMMouseScroll");
       })
 
       $('#website .rbw #detail').click(function(){
-        $('.workdetail .w_detail_03').addClass('on');
+        $('.workdetail .w_detail_02').addClass('on');
         $('#works .bg_black').addClass('on');
+        $('section').off("mousewheel DOMMouseScroll");
       })
 
       $('#website .uplus #detail').click(function(){
-        $('.workdetail .w_detail_04').addClass('on');
+        $('.workdetail .w_detail_03').addClass('on');
         $('#works .bg_black').addClass('on');
+        $('section').off("mousewheel DOMMouseScroll");
       })
 
       $('#responsive .noroo #detail').click(function(){
         $('.workdetail .r_detail_01').addClass('on');
         $('#works .bg_black').addClass('on');
+        $('section').off("mousewheel DOMMouseScroll");
       })
 
       $('#responsive .roche #detail').click(function(){
         $('.workdetail .r_detail_02').addClass('on');
         $('#works .bg_black').addClass('on');
+        $('section').off("mousewheel DOMMouseScroll");
       })
 
       $(document).mouseup(function (e){
@@ -248,10 +284,39 @@ $(function(){
         if(LayerPopup.has(e.target).length === 0){
           LayerPopup.removeClass("on");
           $('#works .bg_black').removeClass('on');
+          $("section").each(function () {
+            $(this).on("mousewheel DOMMouseScroll", function (e) {
+              e.preventDefault();
+              var delta = 0;
+              if (!event) event = window.event;
+              if (event.wheelDelta) {
+                  delta = event.wheelDelta / 120;
+                  if (window.opera) delta = -delta;
+              } else if (event.detail) delta = -event.detail / 3;
+        
+              var moveTop = null;
+              if (delta < 0) {
+                  if ($(this).next() != undefined) {
+                      moveTop = $(this).next().offset().top;
+                  }
+              } else {
+                  if ($(this).prev() != undefined) {
+                      moveTop = $(this).prev().offset().top;
+                  }
+              }
+        
+              $("html,body").stop().animate({
+                  scrollTop: moveTop + 'px'
+              }, {
+                  duration: 100, complete: function () {
+                  }
+        
+              });
+        
+            });
+          });
         }
       })
-
-
 
   
 })
