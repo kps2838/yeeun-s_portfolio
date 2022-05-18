@@ -22,6 +22,8 @@ $(function(){
             $("#gnb > ul > li").eq(0).find('a').css('color','#ff0000')
           }
 
+
+
         if (scroll >= about_scroll && scroll < works_scroll) {
           $("#gnb > ul > li > a").css("color" , "#252C65");
           $("#gnb .border").css("background-color" , "#252C65");
@@ -214,6 +216,7 @@ $(function(){
     }
 
     
+  var scroll_section = function(){
     $("section").each(function () {
       $(this).on("mousewheel DOMMouseScroll", function (e) {
         e.preventDefault();
@@ -245,6 +248,10 @@ $(function(){
   
       });
     });
+  }
+
+  scroll_section();
+
 
 
       // 팝업창
@@ -284,37 +291,7 @@ $(function(){
         if(LayerPopup.has(e.target).length === 0){
           LayerPopup.removeClass("on");
           $('#works .bg_black').removeClass('on');
-          $("section").each(function () {
-            $(this).on("mousewheel DOMMouseScroll", function (e) {
-              e.preventDefault();
-              var delta = 0;
-              if (!event) event = window.event;
-              if (event.wheelDelta) {
-                  delta = event.wheelDelta / 120;
-                  if (window.opera) delta = -delta;
-              } else if (event.detail) delta = -event.detail / 3;
-        
-              var moveTop = null;
-              if (delta < 0) {
-                  if ($(this).next() != undefined) {
-                      moveTop = $(this).next().offset().top;
-                  }
-              } else {
-                  if ($(this).prev() != undefined) {
-                      moveTop = $(this).prev().offset().top;
-                  }
-              }
-        
-              $("html,body").stop().animate({
-                  scrollTop: moveTop + 'px'
-              }, {
-                  duration: 100, complete: function () {
-                  }
-        
-              });
-        
-            });
-          });
+          scroll_section();
         }
       })
 
