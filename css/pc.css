@@ -286,6 +286,10 @@ section .title_border{
     position: relative;
 }
 
+#works .title div:first-child > p{
+    margin-right: -20px;
+}
+
 #works .title p{
     color: #fff;
 }
