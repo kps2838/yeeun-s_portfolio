@@ -697,12 +697,13 @@ section .title_border{
 }
 
 
-#mobile .webpage{
+#mobile .text .btn-group > button:first-child{
     background-color: #252C65;
     color: #fff;
     margin: 0;
     padding: 0;
 }
+
 
 #works .bg_black{
     width: 100vw;

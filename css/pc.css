@@ -715,12 +715,12 @@ section .title_border{
     cursor: pointer;
 }
 
-#works .webpage{
+#works .btn-group .webpage{
     margin-right: 50px;
 }
 
 
-#mobile .webpage{
+#mobile .text .btn-group > button:first-child{
     background-color: #252C65;
     color: #fff;
     margin: 0;
