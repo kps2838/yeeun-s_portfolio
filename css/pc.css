@@ -454,7 +454,7 @@ section .title_border{
 #works #website .images{
     position: relative;
     margin-right: 100px;
-    padding-top: 110px;
+    padding-top: 90px;
 }
 
 #works #mobile .images{
@@ -465,16 +465,16 @@ section .title_border{
 
 #works #responsive .images{
     position: relative;
-    padding-top: 110px;
+    padding-top: 80px;
     margin-right: 100px;
 }
 
 #works #responsive .images > img{
-    width: 500px;
+    width: 30vw;
 }
 
 #works #website .images > img{
-    width: 500px;
+    width: 30vw;
 }
 
 #works #mobile .images > img{
@@ -482,11 +482,11 @@ section .title_border{
 }
 
 #works #website .images > h3{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 30px;
     font-weight: 600;
     color: #fff;
-    width: 500px;
+    width: 30vw;
     text-align: center;
     padding-left: 60px;
 }
@@ -504,7 +504,7 @@ section .title_border{
     font-size: 30px;
     font-weight: 600;
     color: #fff;
-    width: 500px;
+    width: 30vw;
     text-align: center;
 }
 
@@ -715,12 +715,12 @@ section .title_border{
     cursor: pointer;
 }
 
-#works #webpage{
+#works .webpage{
     margin-right: 50px;
 }
 
 
-#mobile #webpage{
+#mobile .webpage{
     background-color: #252C65;
     color: #fff;
     margin: 0;
@@ -767,7 +767,7 @@ section .title_border{
 }
 
 
-#mobile #webpage{
+#mobile .webpage{
     margin-right: 0;
 }
 

@@ -261,31 +261,31 @@ $(function(){
 
   // 팝업창
 
-      $('#website .han #detail').click(function(){
+      $('#website .han .detail').click(function(){
         $('.workdetail .w_detail_01').addClass('on');
         $('#works .bg_black').addClass('on');
         $('section').off("mousewheel DOMMouseScroll");
       })
 
-      $('#website .rbw #detail').click(function(){
+      $('#website .rbw .detail').click(function(){
         $('.workdetail .w_detail_02').addClass('on');
         $('#works .bg_black').addClass('on');
         $('section').off("mousewheel DOMMouseScroll");
       })
 
-      $('#website .uplus #detail').click(function(){
+      $('#website .uplus .detail').click(function(){
         $('.workdetail .w_detail_03').addClass('on');
         $('#works .bg_black').addClass('on');
         $('section').off("mousewheel DOMMouseScroll");
       })
 
-      $('#responsive .noroo #detail').click(function(){
+      $('#responsive .noroo .detail').click(function(){
         $('.workdetail .r_detail_01').addClass('on');
         $('#works .bg_black').addClass('on');
         $('section').off("mousewheel DOMMouseScroll");
       })
 
-      $('#responsive .roche #detail').click(function(){
+      $('#responsive .roche .detail').click(function(){
         $('.workdetail .r_detail_02').addClass('on');
         $('#works .bg_black').addClass('on');
         $('section').off("mousewheel DOMMouseScroll");
