@@ -692,12 +692,12 @@ section .title_border{
     cursor: pointer;
 }
 
-#works #webpage{
+#works .webpage{
     margin-right: 50px;
 }
 
 
-#mobile #webpage{
+#mobile .webpage{
     background-color: #252C65;
     color: #fff;
     margin: 0;
@@ -741,7 +741,7 @@ section .title_border{
 }
 
 
-#mobile #webpage{
+#mobile .webpage{
     margin-right: 0;
 }
 
